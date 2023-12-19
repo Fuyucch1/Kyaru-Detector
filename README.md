@@ -26,6 +26,8 @@ However, while I truly respect nagadomi's works, I feel like I should do the cas
 
 As of the 10th of December, I am still trying to create a new one. Building a correct dataset to train the cascade on from scratch has been way more time-consuming than I thought it would be.
 
+19/12/2023 => I am upgrading my work env (AMD is definitely not cut for that kind of thing, so I'm trying to use a nvidia gpu)
+
 # Second step
 
 Even though the first approach is not finshed yet, it does not prevent me from taking a break and trying to think differently about the problem.
