@@ -20,13 +20,13 @@ In this project, we will try to build a complete pipeline which will recognize K
 
 When I think of "character recognition", my mind goes towards "detection" first. If I want my project to be able to detect Kyaru, I need it to be able to detect characters first, and then to decide if the character is Kyaru or not.
 
-The easiest way to do it is to use [nagadomi's lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface/tree/master). The cascade works pretty well and as intended : it extracts the face of characters.
+One of the easiest ways, and most cost-efficient ones is [nagadomi's lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface/tree/master). The cascade works pretty well and as intended : it extracts the face of characters.
 
-However, while I truly respect nagadomi's works, I feel like I should do the cascade myself. Nagadomi's cascade was trained 9 years ago, maybe trying to do a new one could result in a better model.
+However, while I truly respect nagadomi's works, I feel like I should train a model myself. Nagadomi's cascade was trained 9 years ago, maybe trying to do a new one could result in a better model.
 
-As of the 10th of December, I am still trying to create a new one. Building a correct dataset to train the cascade on from scratch has been way more time-consuming than I thought it would be.
+Training a new cascade could be considered a good idea. However, because of traincascade being removed since OpenCV's 4.0, I am thinking on exploring another lead.
 
-19/12/2023 => I am upgrading my work env (AMD is definitely not cut for that kind of thing, so I'm trying to use a nvidia gpu)
+I will create myself a dataset based on Safebooru pictures. I will train the model based on [ultralytics' YOLOv8](https://github.com/ultralytics/ultralytics). 
 
 # Second step
 
