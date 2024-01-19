@@ -16,7 +16,7 @@ The answer's simple : the model won't recognize the character if it's been solel
 
 In this project, we will try to build a complete pipeline which will recognize Kyaru. We will try to detect her not only thanks to her face, but using all the characteristics of her character design. We will even try to add voice recognition.
 
-# First approach
+# First approach : Face detection
 
 When I think of "character recognition", my mind goes towards "detection" first. If I want my project to be able to detect Kyaru, I need it to be able to detect characters first, and then to decide if the character is Kyaru or not.
 
@@ -26,13 +26,17 @@ However, while I truly respect nagadomi's works, I feel like I should train a mo
 
 Training a new cascade could be considered a good idea. However, because of traincascade being removed since OpenCV's 4.0, I am thinking on exploring another lead.
 
-I will create myself a dataset based on Safebooru pictures. I will train the model based on [ultralytics' YOLOv8](https://github.com/ultralytics/ultralytics). 
+I will train the model based on [ultralytics' YOLOv8](https://github.com/ultralytics/ultralytics). 
+
+The model will be trained on a custom dataset made by myself. The dataset is a dump of 10 000 [safebooru](https://safebooru.org)'s images. The dataset was fully annotated by myself on Roboflow.
+
+Dataset can be provided if needed.
 
 # Second step
 
 Even though the first approach is not finshed yet, it does not prevent me from taking a break and trying to think differently about the problem.
 
-The cascade is great because it helps detecting **faces**. But what about everything else ? A character is not only a face, it is also a complex blend of attributes.
+The previous step is great because it helps detecting **faces**. But what about everything else ? A character is not only a face, it is also a complex blend of attributes.
 
 Here's an example of what defines Kyaru : 
 - Green eyes
@@ -41,8 +45,9 @@ Here's an example of what defines Kyaru :
 - Characteristic outfit
 - Voice Actress
 
-One approach we might want to take is called a **Multi-Label Classification**. We can try to create a model which will describe what it sees, and then compare it with the set of attributes corresponding to Kyaru.
-
+There are multiple approaches we want to check out :
+- **Multi-Label Classification** : We can try to create a model which will describe what it sees, and then compare it with the set of attributes corresponding to Kyaru.
+- **Simple Detection model** : We are trying to detect faces, but can we expand the annotation to the whole character ? This is something we must try out.
 
 # Bibliography
 
