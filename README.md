@@ -18,6 +18,8 @@ In this project, we will try to build a complete pipeline which will recognize K
 
 # First approach : Face detection
 
+## Introduction
+
 When I think of "character recognition", my mind goes towards "detection" first. If I want my project to be able to detect Kyaru, I need it to be able to detect characters first, and then to decide if the character is Kyaru or not.
 
 One of the easiest ways, and most cost-efficient ones is [nagadomi's lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface/tree/master). The cascade works pretty well and as intended : it extracts the face of characters.
@@ -26,13 +28,19 @@ However, while I truly respect nagadomi's works, I feel like I should train a mo
 
 Training a new cascade could be considered a good idea. However, because of traincascade being removed since OpenCV's 4.0, I am thinking on exploring another lead.
 
-Model and notebooks are available [here](https://github.com/MagicalKyaru/yolov8_animeface).
+## First step
 
-# Second step
+I have trained a model to detect faces. Model and notebooks are available [here](https://github.com/MagicalKyaru/yolov8_animeface).
+
+## Second step
+
+I'm going to use this face detector to extract faces and create a new dataset. One will be "Kyaru" and the other "Not Kyaru". We'll feed those extracts to an InceptionV3 and see how it will perform.
+
+# Second approach
 
 Even though the first approach is not finshed yet, it does not prevent me from taking a break and trying to think differently about the problem.
 
-The previous step is great because it helps detecting **faces**. But what about everything else ? A character is not only a face, it is also a complex blend of attributes.
+The previous one is great because it helps detecting **faces**. But what about everything else ? A character is not only a face, it is also a complex blend of attributes.
 
 Here's an example of what defines Kyaru : 
 - Green eyes
