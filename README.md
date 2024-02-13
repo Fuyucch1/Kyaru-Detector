@@ -26,11 +26,7 @@ However, while I truly respect nagadomi's works, I feel like I should train a mo
 
 Training a new cascade could be considered a good idea. However, because of traincascade being removed since OpenCV's 4.0, I am thinking on exploring another lead.
 
-I will train the model based on [ultralytics' YOLOv8](https://github.com/ultralytics/ultralytics). 
-
-The model will be trained on a custom dataset made by myself. The dataset is a dump of 10 000 [safebooru](https://safebooru.org)'s images. The dataset was fully annotated by myself on Roboflow.
-
-Dataset can be provided if needed.
+Model and notebooks are available [here](https://github.com/MagicalKyaru/yolov8_animeface).
 
 # Second step
 
