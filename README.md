@@ -36,6 +36,10 @@ I have trained a model to detect faces. Model and notebooks are available [here]
 
 I'm going to use this face detector to extract faces and create a new dataset. One will be "Kyaru" and the other "Not Kyaru". We'll feed those extracts to an InceptionV3 and see how it will perform.
 
+//
+
+Might as well train a small dataset on full Kyarus to see how it turns out...
+
 # Second approach
 
 Even though the first approach is not finshed yet, it does not prevent me from taking a break and trying to think differently about the problem.
